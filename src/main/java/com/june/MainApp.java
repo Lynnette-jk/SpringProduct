@@ -7,9 +7,8 @@ import org.springframework.context.annotation.*;
 
 public class MainApp {
    public static void main(String[] args) {
-      ApplicationContext ctx = new AnnotationConfigApplicationContext(ProductConfig.class);
-      Product product = ctx.getBean(Product.class);
-      product.setMessage("Hello World!");
-      product.getMessage();
+      ApplicationContext ctx = new AnnotationConfigApplicationContext(TextEditorConfig.class);
+      TextEditor te = ctx.getBean(TextEditor.class);
+      te.spellCheck();
    }
 }
